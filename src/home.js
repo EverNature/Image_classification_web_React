@@ -167,7 +167,7 @@ export const ImageUpload = () => {
       });
       if (res.status === 200) {
         console.log(res.data);
-        let name = res.data.prediction[0].clas;
+        let name = res.data.prediction[0].class;
         let confidence = res.data.prediction[0].confidence;
         let data = { 'class': name, 'confidence': confidence };
         setData(data);
